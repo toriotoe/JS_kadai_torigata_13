@@ -1,0 +1,103 @@
+
+.body{
+  margin: auto;
+  width: 1000px;
+  text-align: center;
+}
+
+/*サイト全体の幅*/
+
+.janken_box{
+  display: flex;
+  justify-content: space-around;
+  padding-top: 20px;
+  width: 1000px;
+}
+
+/*じゃんけんタイトル＋じゃんけん表示＋じゃんけんボタン*/
+
+.title h1{
+  font-size: 50px;
+  padding-bottom: 10px;
+}
+
+/*タイトル*/
+
+.janken_image{
+  border: solid 15px;
+  margin: auto;
+  width: 450px;
+  height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.win {
+background-color: #FA5858;
+}
+.lose {
+background-color: #0080FF;
+}
+.draw {
+background-color: #81F79F;
+}
+
+.janken_image h1{
+  font-size: 45px;
+}
+
+.janken_image img{
+  width: 70%;
+  height: auto;
+}
+
+/*ランダムじゃんけん表示*/
+
+.janken_box h2{
+  padding-top: 10px;
+  font-size: 30px;
+}
+
+/*勝敗結果*/
+
+.button{
+  display: block;
+  padding-top: 20px;
+}
+
+.button_goo{
+  width: 180px;
+  height: 180px;
+  padding-bottom: 10px;
+}
+
+.button_goo:hover {
+  margin: -3px;
+  border: solid 3px #CCC;
+}
+
+.button_choki{
+  width: 200px;
+  height: 180px;
+  display: flex;
+  padding-bottom: 10px;
+  justify-content: center;
+}
+
+.button_choki:hover {
+  margin: -3px;
+  border: solid 3px #CCC;
+}
+
+.button_par{
+  width: 200px;
+  height: 180px;
+  padding-bottom: 10px;
+}
+
+.button_par:hover {
+  margin: -3px;
+  border: solid 3px #CCC;
+}
+/*じゃんけんボタン*/

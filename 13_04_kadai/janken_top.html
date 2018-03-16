@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  <title>じゃんけんアプリ</title>
+  <link rel="stylesheet" href="janken.css"/>
+  <link rel="stylesheet" href="reset.css"/>
+  <!-- ここからjavascript -->
+  <script type="text/javascript">
+  $(document).ready(function(){
+    // グーの場合
+    $(".button_goo").on("click",function(){
+      var cpu = Math.floor(Math.random()*3+1);
+      if (cpu==1){
+        $(".janken_image").replaceWith("<div class='janken_image draw'><img src=グー.png><h2>ひきわけ</h2></div>");
+      }else if(cpu==2){
+        $(".janken_image").replaceWith("<div class='janken_image win'><img src=チョキ.png><h2>勝ち</h2></div>");
+      }else if(cpu==3){
+        $(".janken_image").replaceWith("<div class='janken_image lose'><img src=パー.png><h2>負け</h2></div>");
+      };
+    });
+    // パーの場合
+    $(".button_par").on("click",function(){
+      var cpu = Math.floor(Math.random()*3+1);
+      if (cpu==1){
+        $(".janken_image").replaceWith("<div class='janken_image lose'><img src=グー.png><h2>負け</h2></div>");
+      }else if(cpu==2){
+        $(".janken_image").replaceWith("<div class='janken_image draw'><img src=チョキ.png><h2>ひきわけ</h2></div>");
+      }else if(cpu==3){
+        $(".janken_image").replaceWith("<div class='janken_image win'><img src=パー.png><h2>勝ち</h2></div>");
+      };
+    });
+    // チョキの場合
+    $(".button_choki").on("click",function(){
+      var cpu = Math.floor(Math.random()*3+1);
+      if (cpu==1){
+        $(".janken_image").replaceWith("<div class='janken_image win'> <img src=グー.png><h2>勝ち</h2></div>");
+      }else if(cpu==2){
+        $(".janken_image").replaceWith("<div class='janken_image lose'><img src=チョキ.png><h2>負け</h2></div>");
+      }else if(cpu==3){
+        $(".janken_image").replaceWith("<div class='janken_image draw'><img src=パー.png><h2>ひきわけ</h2></div>");
+      };
+    });
+  });
+  </script>
+  <!-- ここまで javascript-->
+</head>
+<body class="body">
+<div class="janken_box">
+  <div class="janken_block" height=500px; width=500px;>
+  <div class="title">
+    <h1>じゃんけんアプリ</h1>
+  </div>
+  <!--タイトル-->
+  <!-- 画面 -->
+  <div class='janken_image'>
+     <h1>ボタンを選んで<br>ゲームスタート！</h1></div>
+  </div>
+　<!-- 画面 -->
+　<!-- ジャンケンボタン -->
+  <div class="button">
+      <input class="button_goo" type="image"
+        name="battle" id="1" value="1" src="グー.png" alt="グー">
+      <input class="button_choki"type="image"
+        name="battle" id="2" value="2" src="チョキ.png" alt="チョキ">
+      <input class="button_par" type="image"
+        name="battle" id="3" value="3" src="パー.png" alt="パー">
+  </div>
+  <!-- ジャンケンボタン -->
+  </div>
+</div>
+</body>
+</html>
